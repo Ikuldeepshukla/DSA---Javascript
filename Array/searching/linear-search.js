@@ -5,11 +5,13 @@ const readline = require("readline-sync");
 
 // Solution
 const linearSearch = (arr, searchElement) => {
+  // loop will check the element and return the index of the element if present
   for (let i = 0; i < arr.length; i++) {
     if (searchElement === arr[i]) {
       return i;
     }
   }
+  // return -1 as element is not present
   return -1;
 };
 
