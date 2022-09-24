@@ -1,6 +1,7 @@
 // Implementation of linear search in Array
 // Given an Array of integer [12, 16,19, 30, 25, 67, 89, 10], find out the element 25 position in the Array, return -1 if element is not present.
 
+// readline-sync import to scan input from console
 const readline = require("readline-sync");
 
 // Solution
