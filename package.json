@@ -1,0 +1,22 @@
+{
+  "name": "dsa---javascript",
+  "version": "1.0.0",
+  "description": "Data Structures concepts and code implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ikuldeepshukla/DSA---Javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ikuldeepshukla/DSA---Javascript/issues"
+  },
+  "homepage": "https://github.com/Ikuldeepshukla/DSA---Javascript#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
