@@ -4,7 +4,7 @@
 // readline-sync import to scan input from console
 const readline = require("readline-sync");
 
-// Solution
+// linear search function - O(n)
 const linearSearch = (arr, searchElement) => {
   // loop will check the element and return the index of the element if present
   for (let i = 0; i < arr.length; i++) {
