@@ -21,30 +21,25 @@ var twoSumBrootforce = function (nums, target) {
   return [v1, v2];
 };
 
-// optimized approach
+// second approach usng inbuild function - indexOf()
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
  */
-let nums = [3, 2, 4];
-let target = 6;
-var twoSum = function (nums, target) {
-  let hashMap = new Map();
-  for (let i = 0; i < nums.length; i++) {
-    hashMap.set(nums[i], i);
+ var twoSum = function(nums, target) {
+  if(nums.length < 2){
+      return [];
   }
-  console.log(hashMap);
-  for (let i = 0; i < nums.length; i++) {
-    let firstNum = nums[i];
-    console.log("fnum ", firstNum);
-    let secondNum = target - firstNum;
-    console.log("snum", secondNum);
-    hashMap.delete(firstNum);
-    if (hashMap.has(secondNum)) {
-      console.log(i, hashMap.get(secondNum));
-      return [i, hashMap.get(secondNum)];
-    }
+  else{
+      for(let i = 0; i < nums.length; i++){
+          let firstNum = nums[i];
+          let secondNum = target - firstNum;
+          let secIndex = nums.indexOf(secondNum);
+          if(secIndex !== -1 && secIndex !== i){
+              return [i, secIndex];
+          }    
+      }
   }
 };
 
