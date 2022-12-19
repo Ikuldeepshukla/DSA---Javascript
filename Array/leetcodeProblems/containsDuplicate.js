@@ -34,3 +34,7 @@ const containsDuplicate = function (nums) {
 //   let set = new Set(nums);
 //   return nums.length != set.size;
 // };
+
+// driver code
+let nums = [1, 2, 3, 1];
+console.log(containsDuplicate(nums));
