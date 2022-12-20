@@ -42,6 +42,31 @@ function isPalindrome(str) {
   return true;
 }
 
+
+
+function check(str) {
+    let obj = {};
+    
+    for(let i=0;i<=str.length-1;i++) {
+        if(obj[str[i]]) {
+            obj[str[i]]++;
+        } else {
+            obj[str[i]] = 1;
+        }
+    }
+    let count = 0;
+    for(ob in obj) {
+        if(obj[ob] == 1) {
+            count++;
+        }   
+    }
+    if(count == 1) {
+        return true;
+    }
+    return false;
+}
+
 // driver code
+// let str = "abbbaccccdd";
 let str = "abbbaccccdd";
-console.log(checkPalindrome(str));
+console.log(check(str));
