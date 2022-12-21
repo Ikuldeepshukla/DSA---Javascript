@@ -18,6 +18,6 @@ var maxProfit = function (prices) {
   return maxProfit;
 };
 
+// driver code
 let prices = [7, 1, 3, 5, 4, 2];
-
 console.log(maxProfit(prices));
