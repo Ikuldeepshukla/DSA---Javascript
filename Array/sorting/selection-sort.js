@@ -1,11 +1,9 @@
-// implementation of quick sort
+// implementation of selection sort
 
 const quickSort = (nums) => {
   let min = nums.length - 1;
-  //   let minIndex = Number.MAX_VALUE;
   let temp = 0;
   for (let i = 0; i < nums.length; i++) {
-    // min = i;
     for (let j = i; j < nums.length; j++) {
       if (nums[j] < nums[min]) {
         min = j;

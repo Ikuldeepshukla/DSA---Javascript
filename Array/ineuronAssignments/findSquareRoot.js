@@ -10,3 +10,27 @@
 // Explanation: The square root of 8 is 2.8284…., the decimal part is truncated and 2 is
 // returned.
 // Hint: Try to use a modified binary search approach for an optimized solution
+
+const findSquareRoot = (num) => {
+  let l = 1;
+  let r = num;
+  return helper(l, r, num, 1);
+};
+
+function helper(l, r, num, tempResult) {
+  if (l <= r) {
+    let mid = Math.trunc(l + (r - l) / 2);
+    if (mid * mid === num) {
+      return mid;
+    } else if (mid * mid > num) {
+      return helper(l, mid - 1, num, tempResult);
+    } else {
+      tempResult = mid;
+      return helper(mid + 1, r, num, tempResult);
+    }
+  }
+  return tempResult;
+}
+
+let n = 1;
+console.log(findSquareRoot(n));
