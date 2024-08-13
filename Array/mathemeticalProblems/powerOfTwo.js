@@ -19,4 +19,12 @@ function isPowerOfTwo(number) {
   }
 }
 
-console.log(isPowerOfTwo(1));
+function optimizedIsPowerOfTwo(number) {
+  if (number < 1) {
+    return false;
+  }
+  return (number & (number - 1)) === 0;
+}
+
+console.log(isPowerOfTwo(1)); // O(n)
+console.log(optimizedIsPowerOfTwo(16)); // O(1)
